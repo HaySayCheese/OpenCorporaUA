@@ -1,7 +1,10 @@
 const PATHS = {
+    STATIC: './static/',
     SOURCE: './static/source/',
     BUILD:  './static/build/'
 };
+
+const DEBUG = true;
 
 
 module.exports = {
@@ -37,7 +40,8 @@ module.exports = {
         },
 
         SETTINGS: {
-            imagePath: PATHS.BUILD + 'images/'
+            imagePath: PATHS.BUILD + 'images/',
+            sourcemap: true
         }
     },
 
@@ -68,6 +72,9 @@ module.exports = {
     },
 
     PATHS: {
-        BUILD: PATHS.BUILD
-    }
+        STATIC: PATHS.STATIC,
+        BUILD:  PATHS.BUILD
+    },
+
+    DEBUG: DEBUG
 };

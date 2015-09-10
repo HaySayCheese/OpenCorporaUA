@@ -1,5 +1,4 @@
 var gulp            = require('gulp'),
-    size            = require('gulp-size'),
     rename          = require('gulp-rename'),
     runSequence     = require('run-sequence'),
     handleErrors    = require('../utils/handleErrors'),
@@ -18,34 +17,13 @@ gulp.task('Scripts', function(callback) {
 
 
 
-gulp.task('Scripts:Development', function(callback) {
-    return gulp.src(SCRIPTS.PATHS.BUILD)
-        .pipe(sourcemaps.init())
-        .pipe(typescript(SCRIPTS.SETTINGS))
-        .on('error', handleErrors)
-        .pipe(uglify())
-        .pipe(sourcemaps.write('/maps'))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(SCRIPTS.HOME.BUILD))
-        .pipe(size());
-});
-
-gulp.task('Scripts:Production', function(callback) {
-    runSequence('Scripts:Home', 'Scripts:About', callback)
-});
-
-
-
 gulp.task('Scripts:Home', function() {
     return gulp.src(SCRIPTS.HOME.SOURCE)
         .pipe(sourcemaps.init())
         .pipe(typescript(SCRIPTS.SETTINGS))
         .on('error', handleErrors)
-        .pipe(uglify())
         .pipe(sourcemaps.write('/maps'))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(SCRIPTS.HOME.BUILD))
-        .pipe(size());
+        .pipe(gulp.dest(SCRIPTS.HOME.BUILD));
 });
 
 gulp.task('Scripts:About', function() {
@@ -53,10 +31,14 @@ gulp.task('Scripts:About', function() {
         .pipe(sourcemaps.init())
         .pipe(typescript(SCRIPTS.SETTINGS))
         .on('error', handleErrors)
-        .pipe(uglify())
         .pipe(sourcemaps.write('/maps'))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(SCRIPTS.ABOUT.BUILD))
-        .pipe(size());
+        .pipe(gulp.dest(SCRIPTS.ABOUT.BUILD));
 });
 
+
+
+gulp.task('Scripts:Compress', function() {
+    return gulp.src(SCRIPTS.PATHS.BUILD + '**/**.js')
+        .pipe(uglify())
+        .pipe(gulp.dest(SCRIPTS.HOME.BUILD));
+});

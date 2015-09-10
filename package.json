@@ -12,6 +12,7 @@
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-changed": "*",
+    "gulp-if": "^1.2.5",
     "gulp-imagemin": "*",
     "gulp-minify-css": "*",
     "gulp-notify": "*",
