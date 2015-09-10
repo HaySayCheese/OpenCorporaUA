@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "ES5"
+    },
+    "files": [
+        "static/source/scripts/main/Bootstrap.ts",
+        "typings/tsd.d.ts"
+    ]
+}
