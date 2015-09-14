@@ -20,12 +20,34 @@ gulp.task('Styles', function(callback) {
 
 
 
+gulp.task('Styles:App:Clean', function() {
+    return del([STYLES.APP.BUILD])
+});
+
 gulp.task('Styles:Landing:Clean', function() {
     return del([STYLES.LANDING.BUILD])
 });
 
 gulp.task('Styles:About:Clean', function() {
     return del([STYLES.ABOUT.BUILD])
+});
+
+
+
+gulp.task('Styles:App', ['Styles:App:Clean'], function() {
+    return gulp.src(STYLES.APP.SOURCE + 'app.scss')
+        .pipe(gulpif(DEBUG, sourcemaps.init()))
+        .pipe(sass(STYLES.SETTINGS))
+        .pipe(autoprefixer({
+            browsers: ['last 2 version'],
+            cascade: false
+        }))
+        .pipe(gulpif(DEBUG, sourcemaps.write('/maps', {
+            includeContent: false
+        })))
+        .on('error', handleErrors)
+        .pipe(gulpif(!DEBUG, minifyCSS()))
+        .pipe(gulp.dest(STYLES.APP.BUILD));
 });
 
 

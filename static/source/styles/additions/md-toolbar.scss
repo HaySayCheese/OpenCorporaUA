@@ -1,0 +1,12 @@
+$md-toolbar-height: 56px;
+
+md-toolbar {
+    height: $md-toolbar-height;
+    min-height: $md-toolbar-height;
+
+    a,
+    button {
+        height: $md-toolbar-height !important;
+        line-height: $md-toolbar-height !important;
+    }
+}

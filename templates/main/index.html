@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>OpenCorporaUA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.0/angular-material.min.css">
-    <link rel="stylesheet" href="{{ static }}build/styles/landing/landing.css">
 
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.0/angular-material.min.js"></script>
+    <link rel="stylesheet" href="{{ static }}build/styles/app/app.css">
+
 
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
@@ -16,9 +18,60 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-messages.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-aria.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-animate.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.0/angular-material.min.js"></script>
 </head>
-<body>
-    test here
+<body layout="column">
+    <md-toolbar>
+        <div class="md-toolbar-tools md-whiteframe-z2">
+            <span flex-lg="10" flex-gt-lg="20"></span>
+            <md-button href="/" aria-label="Головна">
+                OpenCorpora.UA
+            </md-button>
+            <span flex="5"></span>
+            <md-button href="/dictionary" aria-label="Словник">
+                Словник
+            </md-button>
+            <md-button href="/download" aria-label="Заватажити">
+                Заватажити
+            </md-button>
+            <md-button href="/about" aria-label="Про проект">
+                Про проект
+            </md-button>
+            <md-button href="/markup" aria-label="Розмітка" disabled="disabled">
+                Розмітка
+            </md-button>
+            <md-button href="/statistics" aria-label="Статистика" disabled="disabled">
+                Статистика
+            </md-button>
+            <span flex-lg="10" flex-gt-lg="20"></span>
+        </div>
+    </md-toolbar>
+
+
+    <md-content class="md-padding" layout="row" flex>
+        <span flex-lg="10" flex-gt-lg="20"></span>
+
+        <div class="md-padding" flex>
+            pfsafasfasfas
+        </div>
+
+        <span flex-lg="10" flex-gt-lg="20"></span>
+    </md-content>
+
+
+
+    <md-toolbar class="md-tall md-dark-theme">
+        <span flex></span>
+        <h2 class="md-toolbar-tools md-toolbar-tools-bottom md-padding">
+            <span flex-lg="10" flex-gt-lg="20"></span>
+            <span class="md-padding">
+                Toolbar: tall with actions pin to the bottom (md-warn md-hue-3)
+            </span>
+            <span flex-lg="10" flex-gt-lg="20"></span>
+        </h2>
+    </md-toolbar>
+
+
 
     <script type="text/javascript" src="{{ static }}build/scripts/app/AppModule.js"></script>
 </body>

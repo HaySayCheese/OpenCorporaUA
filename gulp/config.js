@@ -25,6 +25,10 @@ module.exports = {
 
 
     STYLES: {
+        APP: {
+            SOURCE: PATHS.SOURCE    + "styles/app/",
+            BUILD:  PATHS.BUILD     + "styles/app/"
+        },
         LANDING: {
             SOURCE: PATHS.SOURCE    + "styles/landing/",
             BUILD:  PATHS.BUILD     + "styles/landing/"
