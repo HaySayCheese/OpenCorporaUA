@@ -97,4 +97,4 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATIC_URL = '127.0.0.1/open_corpora_ua_static/'
+STATIC_URL = 'http://127.0.0.1/open_corpora_ua_static/'
