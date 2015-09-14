@@ -4,7 +4,7 @@ const PATHS = {
     BUILD:  './static/build/'
 };
 
-const DEBUG = true;
+var DEBUG = true;
 
 
 module.exports = {
@@ -25,9 +25,9 @@ module.exports = {
 
 
     STYLES: {
-        HOME: {
-            SOURCE: PATHS.SOURCE    + "styles/home/",
-            BUILD:  PATHS.BUILD     + "styles/home/"
+        LANDING: {
+            SOURCE: PATHS.SOURCE    + "styles/landing/",
+            BUILD:  PATHS.BUILD     + "styles/landing/"
         },
         ABOUT: {
             SOURCE: PATHS.SOURCE    + "styles/about/",
@@ -47,12 +47,16 @@ module.exports = {
 
 
     SCRIPTS: {
-        HOME: {
-            SOURCE: PATHS.SOURCE    + "scripts/home/**/*.ts",
-            BUILD:  PATHS.BUILD     + "scripts/home/"
+        APP: {
+            SOURCE: PATHS.SOURCE    + "scripts/base/app/",
+            BUILD:  PATHS.BUILD     + "scripts/app/"
+        },
+        LANDING: {
+            SOURCE: PATHS.SOURCE    + "scripts/base/landing/",
+            BUILD:  PATHS.BUILD     + "scripts/landing/"
         },
         ABOUT: {
-            SOURCE: PATHS.SOURCE    + "scripts/about/**/*.ts",
+            SOURCE: PATHS.SOURCE    + "scripts/base/about/",
             BUILD:  PATHS.BUILD     + "scripts/about/"
         },
 
@@ -64,7 +68,6 @@ module.exports = {
         SETTINGS: {
             target: 'ES5',
             module: 'commonjs',
-            declarationFiles: false,
             noImplicitAny: false,
             removeComments: true,
             noLib: false

@@ -24,7 +24,7 @@
     "gulp-uglify": "*",
     "gulp-util": "*",
     "pretty-hrtime": "*",
-    "require-dir": "*",
+    "require-dir": "^0.3.0",
     "run-sequence": "*",
     "tsd": "^0.6.4",
     "vinyl-source-stream": "*"

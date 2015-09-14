@@ -15,13 +15,13 @@ var gulp            = require('gulp'),
 
 
 gulp.task('Styles', function(callback) {
-    runSequence('Styles:Home', 'Styles:About', callback)
+    runSequence('Styles:Landing', 'Styles:About', callback)
 });
 
 
 
-gulp.task('Styles:Home:Clean', function() {
-    return del([STYLES.HOME.BUILD])
+gulp.task('Styles:Landing:Clean', function() {
+    return del([STYLES.LANDING.BUILD])
 });
 
 gulp.task('Styles:About:Clean', function() {
@@ -30,8 +30,8 @@ gulp.task('Styles:About:Clean', function() {
 
 
 
-gulp.task('Styles:Home', ['Styles:Home:Clean'], function() {
-    return gulp.src(STYLES.HOME.SOURCE + 'home.scss')
+gulp.task('Styles:Landing', ['Styles:Landing:Clean'], function() {
+    return gulp.src(STYLES.LANDING.SOURCE + 'landing.scss')
         .pipe(gulpif(DEBUG, sourcemaps.init()))
         .pipe(sass(STYLES.SETTINGS))
         .pipe(autoprefixer({
@@ -43,7 +43,7 @@ gulp.task('Styles:Home', ['Styles:Home:Clean'], function() {
         })))
         .on('error', handleErrors)
         .pipe(gulpif(!DEBUG, minifyCSS()))
-        .pipe(gulp.dest(STYLES.HOME.BUILD));
+        .pipe(gulp.dest(STYLES.LANDING.BUILD));
 });
 
 
