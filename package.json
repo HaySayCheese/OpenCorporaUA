@@ -1,0 +1,32 @@
+{
+  "name": "OpenCorporaUA",
+  "description": "description",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HaySayCheese/OpenCorporaUA"
+  },
+  "devDependencies": {
+    "del": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-changed": "*",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-size": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-typescript": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "pretty-hrtime": "*",
+    "require-dir": "^0.3.0",
+    "run-sequence": "*",
+    "tsd": "^0.6.4",
+    "vinyl-source-stream": "*"
+  }
+}

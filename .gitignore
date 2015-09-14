@@ -1,3 +1,4 @@
+/node_modules
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -10,6 +11,7 @@ __pycache__/
 env/
 venv/
 build/
+/static/build
 develop-eggs/
 dist/
 downloads/
@@ -20,6 +22,7 @@ lib64/
 parts/
 sdist/
 var/
+/bower_components
 *.egg-info/
 .installed.cfg
 *.egg
